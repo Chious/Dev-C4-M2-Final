@@ -1,0 +1,324 @@
+/***********************
+CSS Reset
+***********************/
+
+/* 載入字型 */
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,700&display=swap&subset=chinese-traditional");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+body {
+  background-color: #f6f7f8;
+  font-family: "Noto Sans TC", sans-serif; /* 設定字型 */
+  font-size: 1rem;
+  line-height: 1.4;
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  line-height: 0.9;
+}
+p {
+  margin: 0;
+}
+ul,
+li {
+  list-style-type: none; /* 拿掉前方圈圈 */
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none; /* 拿掉底線 */
+}
+
+/* Default Setting*/
+
+.container {
+  width: 85%;
+  margin: 0 auto 3rem auto;
+}
+
+/***********************
+Main Section
+***********************/
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: relative;
+  top: 60px;
+  gap: 10px;
+}
+
+.main-card-content {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  height: 380px;
+  text-align: center;
+}
+
+/*Embedded picture */
+.main-card-end {
+  height: 300px;
+  width: 300px;
+  background-size: cover;
+}
+
+.card-img1,
+.card-img5,
+.card-img9,
+.card-img13 {
+  background-image: url("https://assets-lighthouse.alphacamp.co/uploads/image/file/14372/bastian-ignacio-vega-cani-9UAfLTqMoS0-unsplash__2_.png");
+}
+
+.card-img2,
+.card-img6,
+.card-img10,
+.card-img14 {
+  background-image: url("https://assets-lighthouse.alphacamp.co/uploads/image/file/14365/anomaly-WWesmHEgXDs-unsplash.jpg");
+}
+
+.card-img3,
+.card-img7,
+.card-img11 {
+  background-image: url("https://assets-lighthouse.alphacamp.co/uploads/image/file/14374/faith-yarn-hgtWvsq5e2c-unsplash.png");
+}
+
+.card-img4,
+.card-img8,
+.card-img12 {
+  background-image: url("https://assets-lighthouse.alphacamp.co/uploads/image/file/14373/christian-bolt-VW5VjskNXZ8-unsplash.png");
+}
+
+/*Hide the cloth */
+.main-card-front {
+  background-image: url("https://assets-lighthouse.alphacamp.co/uploads/image/file/14362/t-shirt.png");
+  background-color: white;
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background-size: cover;
+  transition: opacity 0.3s;
+  opacity: 1;
+  z-index: 1;
+}
+
+/*!!!!Why not work out? */
+div.sold-out p.card-price {
+  text-decoration-line: line-through;
+}
+
+/*Grid Cards */
+
+.main .container {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1rem;
+  width: 100%;
+}
+
+/*While hover, show picture */
+
+.main-card-content:hover .main-card-front {
+  opacity: 0;
+}
+
+/*********************************
+Header
+*********************************/
+i {
+  width: 40px;
+  height: 40px;
+
+  text-align: center;
+}
+
+header {
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  display: grid;
+  grid-template-columns: 40px 40px 1fr 40px 40px;
+  grid-template-rows: 40px;
+  align-items: center;
+  background: white;
+  z-index: 999;
+}
+
+.header-title-c {
+  font-size: 4px;
+  top: 0px;
+  position: absolute;
+}
+
+.help-find {
+  width: 30px;
+  height: 30px;
+
+  grid-column: 1/2;
+  grid-row: 1;
+}
+
+.header-logo {
+  width: 40px;
+  grid-column: 2 / 3;
+  grid-row: 1;
+}
+.header-title {
+  grid-column: 3 / 4;
+  grid-row: 1;
+}
+
+.help-favorite {
+  grid-column: 4/5;
+  grid-row: 1;
+  background-image: url("https://img.icons8.com/ios/50/like--v1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+}
+.help-shop {
+  grid-column: 5/6;
+  grid-row: 1;
+  background-image: url("https://img.icons8.com/ios-glyphs/60/bag-front-view.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+}
+
+.nav-category {
+  visibility: hidden;
+  grid-template-rows: auto 0px;
+}
+
+/***********************
+Sub Section
+***********************/
+
+#subscribe {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  top: 60px;
+}
+
+#subscribe .container {
+  background-image: url("https://assets-lighthouse.alphacamp.co/uploads/image/file/14376/template.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+
+  height: 225px;
+
+  text-align: center;
+}
+
+.sub-scription a {
+  all: initial;
+}
+
+#email {
+  height: 30px;
+  width: 250px;
+}
+
+.submit {
+  height: 30px;
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border: none;
+}
+
+form {
+  border-radius: 90%;
+}
+
+#end p.description {
+  text-align: center;
+}
+
+/*********************************
+PC Size
+*********************************/
+
+@media screen and (min-width: 815px) {
+  #subscribe .container {
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    display: grid;
+    grid-template-columns: 40px 1fr 2fr 40px 40px 40px;
+    align-content: center;
+    background: white;
+    z-index: 999;
+  }
+
+  .header-logo {
+    grid-row: 1;
+    grid-column: 1 / 2;
+  }
+
+  .header-title {
+    grid-row: 1;
+    grid-column: 2/3;
+  }
+
+  .nav-category {
+    grid-row: 1;
+    visibility: visible;
+    grid-column: 3/4;
+  }
+
+  .help-find {
+    grid-row: 1;
+    grid-column: 4/5;
+  }
+
+  .help-favorite {
+    grid-row: 1;
+    grid-column: 5;
+  }
+
+  .help-shop {
+    grid-row: 1;
+    grid-column: 6;
+  }
+
+  .nav-category {
+    display: flex;
+    font-size: 25px;
+    gap: 50px;
+  }
+
+  .nav-category a {
+    color: black;
+  }
+}
